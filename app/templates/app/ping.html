@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <table style="width:100%">
+        <tr>
+            <th>Date/Time</th>
+            <th>IP Address</th>
+            <th>Site</th>
+            <th>Tunnel Name</th>
+            <th>Tunnel Type</th>
+            <th>Reachable</th>
+        </tr>
+            {% for ping in pings %}
+        <tr>
+            <td>{{ ping.date }}</td>
+            <td>{{ ping.ip }}</td>
+            <td>{{ ping.site }}</td>
+            <td>{{ ping.tunName }}</td>
+            <td>{{ ping.tunType}}</td>
+            <td>{{ ping.reach }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
