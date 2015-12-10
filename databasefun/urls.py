@@ -19,7 +19,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', 'admin.site.urls'),
+    url(r'^$', 'app.views.home', name='home'),
     url(r'^ping/', 'app.views.ping' , name = 'ping'),
-    url(r'^site$', 'app.views.sites' , name = 'site'),
-
 ]

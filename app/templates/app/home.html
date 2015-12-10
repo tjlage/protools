@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <table style="width:100%">
+        <tr>
+            <th>Date/Time</th>
+            <th>IP Address</th>
+            <th>Site</th>
+            <th>Tunnel Name</th>
+            <th>Tunnel Type</th>
+            <th>Reachable</th>
+        </tr>
+            {% for ureach in ureachs %}
+        <tr>
+            <td>{{ ureach.date }}</td>
+            <td>{{ ureach.ip }}</td>
+            <td>{{ ureach.site }}</td>
+            <td>{{ ureach.tunName }}</td>
+            <td>{{ ureach.tunType}}</td>
+            <td>{{ ureach.reach }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
