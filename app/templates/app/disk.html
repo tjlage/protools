@@ -4,7 +4,7 @@
 <style>
 h2 {text-align:center;}
 </style>
-<h2>Current Site Status</h2>
+<h2>Disk Usage</h2>
 </div>
 
 <style>
@@ -25,16 +25,16 @@ h2 {text-align:center;}
             <th>Site</th>
             <th>Tunnel Name</th>
             <th>Tunnel Type</th>
-            <th>Reachable</th>
+            <th>Disk Usage</th>
         </tr>
-            {% for ping in pings %}
+            {% for disk in disks %}
         <tr>
-            <td>{{ ping.date }}</td>
-            <td>{{ ping.ip }}</td>
-            <td>{{ ping.site }}</td>
-            <td>{{ ping.tunName }}</td>
-            <td>{{ ping.tunType}}</td>
-            <td>{{ ping.reach }}</td>
+            <td>{{ disk.date }}</td>
+            <td>{{ disk.ip }}</td>
+            <td>{{ disk.site }}</td>
+            <td>{{ disk.tunName }}</td>
+            <td>{{ disk.tunType }}</td>
+            <td>{{ disk.disk }}</td>
         </tr>
         {% endfor %}
     </table>

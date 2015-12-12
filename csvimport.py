@@ -12,7 +12,10 @@ os.chdir(proj_path)
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 from app.models import IP
-dataReader = csv.reader(open("app/result/ping sample.csv"), delimiter=',')
+
+txtreader = open("time.txt",'r')
+readtmp = "app/result/" + txtreader "ping.txt"
+dataReader = csv.reader(open(readtmp), delimiter=',')
 
 for row in dataReader:
     if row[0] != 'Date/Time': # Ignore the header row, import everything else

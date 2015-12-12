@@ -4,7 +4,7 @@
 <style>
 h2 {text-align:center;}
 </style>
-<h2>Current Site Status</h2>
+<h2>PE count</h2>
 </div>
 
 <style>
@@ -25,16 +25,16 @@ h2 {text-align:center;}
             <th>Site</th>
             <th>Tunnel Name</th>
             <th>Tunnel Type</th>
-            <th>Reachable</th>
+            <th>PE Count</th>
         </tr>
-            {% for ping in pings %}
+            {% for pe in pes %}
         <tr>
-            <td>{{ ping.date }}</td>
-            <td>{{ ping.ip }}</td>
-            <td>{{ ping.site }}</td>
-            <td>{{ ping.tunName }}</td>
-            <td>{{ ping.tunType}}</td>
-            <td>{{ ping.reach }}</td>
+            <td>{{ pe.date }}</td>
+            <td>{{ pe.ip }}</td>
+            <td>{{ pe.site }}</td>
+            <td>{{ pe.tunName }}</td>
+            <td>{{ pe.tunType }}</td>
+            <td>{{ pe.pe}}</td>
         </tr>
         {% endfor %}
     </table>

@@ -10,6 +10,8 @@ class IP(models.Model):
     tunName = models.CharField("Tunnel Name", max_length=50)
     tunType = models.CharField("Tunnel Type", max_length=3)
     reach = models.CharField("Reachable", max_length=5)
+    disk = models.PositiveIntegerField("Disk Usage")
+    pe = models.PositiveIntegerField("PE Count")
 
 class Ping(models.Model):
     #reach = models.BooleanField(default=False)

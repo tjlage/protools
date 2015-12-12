@@ -21,4 +21,7 @@ urlpatterns = [
     url(r'^admin/', 'admin.site.urls'),
     url(r'^$', 'app.views.home'),
     url(r'^ping/', 'app.views.ping'),
+    url(r'^sites/', 'app.views.sites'),
+    url(r'^disk/', 'app.views.disk'),
+    url(r'^pe/', 'app.views.pe'),
 ]

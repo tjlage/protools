@@ -4,7 +4,7 @@
 <style>
 h2 {text-align:center;}
 </style>
-<h2>Current Site Status</h2>
+<h2>Site List</h2>
 </div>
 
 <style>
@@ -20,21 +20,15 @@ h2 {text-align:center;}
 
     <table style="width:100%">
         <tr>
-            <th>Date/Time</th>
-            <th>IP Address</th>
             <th>Site</th>
             <th>Tunnel Name</th>
             <th>Tunnel Type</th>
-            <th>Reachable</th>
         </tr>
-            {% for ping in pings %}
+            {% for site in sites %}
         <tr>
-            <td>{{ ping.date }}</td>
-            <td>{{ ping.ip }}</td>
-            <td>{{ ping.site }}</td>
-            <td>{{ ping.tunName }}</td>
-            <td>{{ ping.tunType}}</td>
-            <td>{{ ping.reach }}</td>
+            <td>{{ site.site }}</td>
+            <td>{{ site.tunName }}</td>
+            <td>{{ site.tunType}}</td>
         </tr>
         {% endfor %}
     </table>
